@@ -43,19 +43,6 @@ class Strategy:
             raise ValueError("Strategy must have a description")
         return True
 
-    def process_bar(self, bar: Dict[str, Any]):
-        """
-        Called for each bar (dict with keys: 'time', 'close', 'volume').
-        Should update internal state and decide on signal.
-        """
-        self.current_bar = bar
-
-    def get_signal(self) -> str:
-        """
-        Return 'buy', 'sell', or 'hold'.
-        """
-        return 'hold'
-
     def get_signals(self, df: pd.DataFrame) -> pd.Series:
         """
         Vectorized version of signal generation.

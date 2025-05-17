@@ -17,27 +17,6 @@ class SMACrossoverStrategy(Strategy):
         self.prices = []
         self.fast = fast
         self.slow = slow
-        self.last_signal = 'hold'
-
-    def process_bar(self, bar):
-        self.current_bar = bar
-        self.prices.append(bar['close'])
-        if len(self.prices) < self.slow:
-            self.last_signal = 'hold'
-            return
-
-        fast_ma = pd.Series(self.prices).rolling(self.fast).mean().iloc[-1]
-        slow_ma = pd.Series(self.prices).rolling(self.slow).mean().iloc[-1]
-
-        if fast_ma > slow_ma and self.position == 0:
-            self.last_signal = 'buy'
-        elif fast_ma < slow_ma and self.position == 1:
-            self.last_signal = 'sell'
-        else:
-            self.last_signal = 'hold'
-
-    def get_signal(self):
-        return self.last_signal
 
     def get_signals(self, df: pd.DataFrame) -> pd.Series:
         fast_ma = df['close'].rolling(self.fast).mean()
