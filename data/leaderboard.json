@@ -61,6 +61,26 @@
             }
         },
         {
+            "author_name": "Jim",
+            "strategy_name": "Enhanced Price Momentum",
+            "description": "Enhanced momentum strategy with trend confirmation, volatility-based position sizing, and risk management.",
+            "last_updated": "2025-05-17T12:50:15.376811Z",
+            "development_metrics": {
+                "sharpe": 1.5028615712789264,
+                "total_return": 83691.01305699791,
+                "max_drawdown": 0.8047181682279175,
+                "n_trades": 175,
+                "win_rate": 0.4685714285714286
+            },
+            "holdout_metrics": {
+                "sharpe": 2.3589800460822663,
+                "total_return": 0.25319737220833005,
+                "max_drawdown": 0.09536946074759874,
+                "n_trades": 8,
+                "win_rate": 0.75
+            }
+        },
+        {
             "author_name": "Mahak",
             "strategy_name": "Advanced Buy And Hold Strategy",
             "description": "This strategy aims to provide a robust, adaptive approach that can perform well across different market conditions while managing risk effectively.",
@@ -141,6 +161,26 @@
             }
         },
         {
+            "author_name": "Aditya",
+            "strategy_name": "SMA Crossover 1",
+            "description": "Goes long when the 30-period SMA crosses above the 120-period SMA, and exits when it crosses below.",
+            "last_updated": "2025-05-17T12:42:57.466976Z",
+            "development_metrics": {
+                "sharpe": 1.2890757652003817,
+                "total_return": 16908.019911407955,
+                "max_drawdown": 0.8924143378220439,
+                "n_trades": 584,
+                "win_rate": 0.4126712328767123
+            },
+            "holdout_metrics": {
+                "sharpe": 0.1546100984967055,
+                "total_return": -0.005179828456650437,
+                "max_drawdown": 0.2720590455045794,
+                "n_trades": 20,
+                "win_rate": 0.25
+            }
+        },
+        {
             "author_name": "Will",
             "strategy_name": "SMA Crossover 1",
             "description": "Goes long when the 18-period SMA crosses above the 80-period SMA, and exits when it crosses below.",
@@ -158,26 +198,6 @@
                 "max_drawdown": 0.25898048706982313,
                 "n_trades": 27,
                 "win_rate": 0.2962962962962963
-            }
-        },
-        {
-            "author_name": "Yuan",
-            "strategy_name": "Volume SMA Confirmation Strategy",
-            "description": "Goes long when the price breaks above the resistance with high volume, and exits when it breaks below the support with high volume.",
-            "last_updated": "2025-05-17T10:50:33.555705Z",
-            "development_metrics": {
-                "sharpe": 1.1497768598234075,
-                "total_return": 4483.2488594820325,
-                "max_drawdown": 0.8781365323919945,
-                "n_trades": 735,
-                "win_rate": 0.48707482993197276
-            },
-            "holdout_metrics": {
-                "sharpe": 0.7297079146266436,
-                "total_return": 0.07258730731958374,
-                "max_drawdown": 0.19649304246128135,
-                "n_trades": 26,
-                "win_rate": 0.46153846153846156
             }
         },
         {
@@ -201,26 +221,6 @@
             }
         },
         {
-            "author_name": "Aditya",
-            "strategy_name": "SMA Crossover 1",
-            "description": "Goes long when the 30-period SMA crosses above the 120-period SMA, and exits when it crosses below.",
-            "last_updated": "2025-05-17T12:42:57.466976Z",
-            "development_metrics": {
-                "sharpe": 1.2890757652003817,
-                "total_return": 16908.019911407955,
-                "max_drawdown": 0.8924143378220439,
-                "n_trades": 584,
-                "win_rate": 0.4126712328767123
-            },
-            "holdout_metrics": {
-                "sharpe": 0.1546100984967055,
-                "total_return": -0.005179828456650437,
-                "max_drawdown": 0.2720590455045794,
-                "n_trades": 20,
-                "win_rate": 0.25
-            }
-        },
-        {
             "author_name": "Will",
             "strategy_name": "ML Enhanced Trading Strategy",
             "description": "A hybrid strategy using machine learning to select optimal parameters for technical indicators including SMA crossovers and RSI.",
@@ -241,23 +241,43 @@
             }
         },
         {
-            "author_name": "Jim",
-            "strategy_name": "Enhanced Price Momentum",
-            "description": "Enhanced momentum strategy with trend confirmation, volatility-based position sizing, and risk management.",
-            "last_updated": "2025-05-17T12:50:15.376811Z",
+            "author_name": "Yuan",
+            "strategy_name": "Volume SMA Confirmation Strategy",
+            "description": "Goes long when the price breaks above the resistance with high volume, and exits when it breaks below the support with high volume.",
+            "last_updated": "2025-05-17T10:50:33.555705Z",
             "development_metrics": {
-                "sharpe": 1.5028615712789264,
-                "total_return": 83691.01305699791,
-                "max_drawdown": 0.8047181682279175,
-                "n_trades": 175,
-                "win_rate": 0.4685714285714286
+                "sharpe": 1.1497768598234075,
+                "total_return": 4483.2488594820325,
+                "max_drawdown": 0.8781365323919945,
+                "n_trades": 735,
+                "win_rate": 0.48707482993197276
             },
             "holdout_metrics": {
-                "sharpe": 2.3589800460822663,
-                "total_return": 0.25319737220833005,
-                "max_drawdown": 0.09536946074759874,
-                "n_trades": 8,
-                "win_rate": 0.75
+                "sharpe": 0.7297079146266436,
+                "total_return": 0.07258730731958374,
+                "max_drawdown": 0.19649304246128135,
+                "n_trades": 26,
+                "win_rate": 0.46153846153846156
+            }
+        },
+        {
+            "author_name": "Barnabas",
+            "strategy_name": "Multi EWMA Crossover (Choppy)",
+            "description": "Goes long when the fast EWMA crosses above the slow EWMA, and exits when it crosses below. Prevents trades when the market is choppy.",
+            "last_updated": "2025-05-17T17:57:56.951056Z",
+            "development_metrics": {
+                "sharpe": 1.1292850486779653,
+                "total_return": 4629.7711500823425,
+                "max_drawdown": 0.911266631874821,
+                "n_trades": 328,
+                "win_rate": 0.34146341463414637
+            },
+            "holdout_metrics": {
+                "sharpe": 0.5300982500415287,
+                "total_return": 0.04090393135053816,
+                "max_drawdown": 0.15072754709598601,
+                "n_trades": 7,
+                "win_rate": 0.2857142857142857
             }
         },
         {
