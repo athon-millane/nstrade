@@ -19,33 +19,6 @@ class TemplateStrategy(Strategy):
         # self.lookback_period = 20
         # self.threshold = 0.02
 
-    def process_bar(self, bar):
-        """
-        Process each bar of data.
-        This is where you implement your strategy logic.
-        
-        Args:
-            bar: Dictionary containing 'time', 'close', and 'volume' data
-        """
-        self.current_bar = bar
-        
-        # Add your strategy logic here
-        # For example:
-        # if self.current_bar['close'] > self.previous_close * (1 + self.threshold):
-        #     self.last_signal = 'buy'
-        # elif self.current_bar['close'] < self.previous_close * (1 - self.threshold):
-        #     self.last_signal = 'sell'
-        # else:
-        #     self.last_signal = 'hold'
-
-    def get_signal(self):
-        """
-        Return the current trading signal.
-        Must return one of: 'buy', 'sell', 'hold'
-        """
-        # Add your signal generation logic here
-        return 'hold'
-
     def get_signals(self, df):
         """
         Vectorized version of signal generation.

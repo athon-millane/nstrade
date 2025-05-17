@@ -14,16 +14,6 @@ class BuyAndHoldStrategy(Strategy):
             strategy_name="Buy and Hold",
             description="Buys Bitcoin at the first bar and holds the position for the entire backtest period."
         )
-        self.has_bought = False
-
-    def process_bar(self, bar):
-        self.current_bar = bar
-
-    def get_signal(self):
-        if not self.has_bought:
-            self.has_bought = True
-            return 'buy'
-        return 'hold'
 
     def get_signals(self, df: pd.DataFrame) -> pd.Series:
         signals = pd.Series('hold', index=df.index)
