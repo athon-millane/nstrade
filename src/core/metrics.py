@@ -58,6 +58,34 @@ def annualized_return(equity_curve, periods_per_year=8760):
     ann_ret = total_ret ** (periods_per_year / n_periods) - 1
     return ann_ret
 
+def r_squared_equity_curve(equity_curve):
+    """
+    Calculate R-squared of equity curve against a linear regression line.
+    Higher values indicate more consistent returns (closer to a straight line).
+    Returns a tuple of (r_squared, slope, intercept) where r_squared is between 0 and 1.
+    """
+    if len(equity_curve) <= 2:
+        return 0.0, 0.0, 0.0
+    
+    # Create x values (time indices)
+    x = np.arange(len(equity_curve))
+    y = np.array(equity_curve)
+    
+    # Calculate linear regression
+    slope, intercept = np.polyfit(x, y, 1)
+    y_pred = slope * x + intercept
+    
+    # Calculate R-squared
+    ss_total = np.sum((y - np.mean(y))**2)
+    ss_residual = np.sum((y - y_pred)**2)
+    
+    if ss_total == 0:
+        return 0.0, slope, intercept
+    
+    r_squared = 1 - (ss_residual / ss_total)
+    return r_squared, slope, intercept
+
+
 def rolling_sharpe_ratio(equity_curve, window=720, periods_per_year=8760):
     """
     Calculate the rolling Sharpe ratio (annualized) on log returns.

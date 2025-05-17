@@ -3,7 +3,7 @@ from typing import Optional
 
 from .metrics import (
     sharpe_ratio, total_return, n_trades, win_rate, max_drawdown, annualized_return,
-    rolling_sharpe_ratio, unrealized_drawdown_series, realized_drawdown_series
+    rolling_sharpe_ratio, unrealized_drawdown_series, realized_drawdown_series, r_squared_equity_curve
 )
 
 def run_backtest(strategy_class, df: pd.DataFrame, initial_capital: float = 10000,
@@ -139,6 +139,7 @@ def run_backtest(strategy_class, df: pd.DataFrame, initial_capital: float = 1000
     returns = equity_curve.pct_change().fillna(0).values
 
     # Metrics
+    r_squared, slope, intercept = r_squared_equity_curve(equity_curve)
     results = {
         'sharpe': sharpe_ratio(returns),
         'total_return': total_return(equity_curve),
@@ -151,5 +152,8 @@ def run_backtest(strategy_class, df: pd.DataFrame, initial_capital: float = 1000
         'rolling_sharpe': rolling_sharpe_ratio(equity_curve),
         'unrealized_drawdown': unrealized_drawdown_series(equity_curve),
         'realized_drawdown': realized_drawdown_series(equity_curve, trades),
+        'r_squared': r_squared,
+        'slope': slope,
+        'intercept': intercept,
     }
     return results
