@@ -7,7 +7,7 @@ Usage: python scripts/update_leaderboard.py path/to/strategy.py
 import argparse
 from pathlib import Path
 import json
-from datetime import datetime
+from datetime import datetime, UTC
 import sys
 
 # Add src to Python path
@@ -26,7 +26,7 @@ def update_leaderboard(strategy_path: str):
         "author_name": strategy.author_name,
         "strategy_name": strategy.strategy_name,
         "description": strategy.description,
-        "last_updated": datetime.utcnow().isoformat() + "Z"
+        "last_updated": datetime.now(UTC).isoformat() + "Z"
     }
     
     # Run backtests
