@@ -26,58 +26,18 @@
             "description": "Dynamic volatility-based strategy using ATR for entries, stops, and position sizing.",
             "last_updated": "2025-05-17T11:49:16.163157Z",
             "development_metrics": {
-                "sharpe": 1.888462660734801,
-                "total_return": 253424314224.25446,
-                "max_drawdown": 0.8210335293187818,
-                "n_trades": 6988,
-                "win_rate": 0.47510017172295366
+                "sharpe": 1.4978796081915853,
+                "total_return": 36965.29154985983,
+                "max_drawdown": 0.9112345532958346,
+                "n_trades": 1,
+                "win_rate": 1.0
             },
             "holdout_metrics": {
-                "sharpe": 1.6737452346894277,
-                "total_return": 0.22663205289801103,
-                "max_drawdown": 0.16424604668618845,
-                "n_trades": 209,
-                "win_rate": 0.430622009569378
-            }
-        },
-        {
-            "author_name": "AryanBhargav",
-            "strategy_name": "Donchian Channel Strategy",
-            "description": "Trades breakouts based on a 20-period Donchian Channel.",
-            "last_updated": "2025-05-17T10:48:50.558267Z",
-            "development_metrics": {
-                "sharpe": 1.6853335109249008,
-                "total_return": 298002959.9805029,
-                "max_drawdown": 0.9739392202670737,
-                "n_trades": 1096,
-                "win_rate": 0.3841240875912409
-            },
-            "holdout_metrics": {
-                "sharpe": 3.4561142192298537,
-                "total_return": 0.5106176445329746,
-                "max_drawdown": 0.06595856609634526,
-                "n_trades": 34,
-                "win_rate": 0.4117647058823529
-            }
-        },
-        {
-            "author_name": "Adi, Mikey, Alex",
-            "strategy_name": "Z-Score Moon Mean Revert",
-            "description": "This PR implements the 'Crying Wolf' trading algorithm, a Z-score mean reversion strategy modulated by natural cyclic phenomena. Entry/exit thresholds adjust based on the moon's cycle, becoming more conservative during full moons when market 'madness' peaks. Our backtesting shows the strategy outperforms during super moons but falters during eclipses. Traditional quants may experience uncontrollable eye-rolling, but as Warren Buffett said, When the moon hits your eye like a big pizza pie, that's a trading opportunity. Our strategy beats buy-and-hold by 1000%, while maintaining a definitively higher sharpe ratio. May the moon shine over us all",
-            "last_updated": "2025-05-17T12:48:24.059589Z",
-            "development_metrics": {
-                "sharpe": 1.6440636071120915,
-                "total_return": 138493571.09371865,
-                "max_drawdown": 0.7819300872251194,
-                "n_trades": 8066,
-                "win_rate": 0.5090503347384081
-            },
-            "holdout_metrics": {
-                "sharpe": 0.9504328150744347,
-                "total_return": 0.12252505311449768,
-                "max_drawdown": 0.1671603743892358,
-                "n_trades": 229,
-                "win_rate": 0.4847161572052402
+                "sharpe": 0.7304733775172676,
+                "total_return": 0.0966376804578859,
+                "max_drawdown": 0.3092850660964837,
+                "n_trades": 1,
+                "win_rate": 1.0
             }
         },
         {
@@ -104,7 +64,7 @@
             "author_name": "Mahak",
             "strategy_name": "Advanced Buy And Hold Strategy",
             "description": "This strategy aims to provide a robust, adaptive approach that can perform well across different market conditions while managing risk effectively.",
-            "last_updated": "2025-05-17T10:08:45.172317Z",
+            "last_updated": "2025-05-18T01:29:33.293652Z",
             "development_metrics": {
                 "sharpe": 1.4933060731407406,
                 "total_return": 31828.251724137932,
@@ -121,21 +81,61 @@
             }
         },
         {
+            "author_name": "Jim",
+            "strategy_name": "Enhanced Price Momentum",
+            "description": "Enhanced momentum strategy with trend confirmation, volatility-based position sizing, and risk management.",
+            "last_updated": "2025-05-18T01:29:18.399367Z",
+            "development_metrics": {
+                "sharpe": 1.239514602061198,
+                "total_return": 0.0,
+                "max_drawdown": 0.9728183339705587,
+                "n_trades": 175,
+                "win_rate": 0.4685714285714286
+            },
+            "holdout_metrics": {
+                "sharpe": 0.16745617216661143,
+                "total_return": 0.0,
+                "max_drawdown": 0.1408540738315031,
+                "n_trades": 8,
+                "win_rate": 0.75
+            }
+        },
+        {
+            "author_name": "Genesis",
+            "strategy_name": "Volatility ATR Strategy",
+            "description": "Dynamic volatility-based strategy using ATR for entries, stops, and position sizing.",
+            "last_updated": "2025-05-18T01:28:51.673722Z",
+            "development_metrics": {
+                "sharpe": 1.0603694117311975,
+                "total_return": 0.0,
+                "max_drawdown": 0.7484744226999092,
+                "n_trades": 6988,
+                "win_rate": 0.47510017172295366
+            },
+            "holdout_metrics": {
+                "sharpe": 0.26236301282914076,
+                "total_return": 0.0,
+                "max_drawdown": 0.08938563282622804,
+                "n_trades": 209,
+                "win_rate": 0.430622009569378
+            }
+        },
+        {
             "author_name": "Genesis",
             "strategy_name": "SMA Crossover 1",
             "description": "Goes long when the 25-period SMA crosses above the 150-period SMA, and exits when it crosses below.",
-            "last_updated": "2025-05-17T11:47:23.920022Z",
+            "last_updated": "2025-05-18T01:28:47.215940Z",
             "development_metrics": {
-                "sharpe": 1.3409691346166333,
-                "total_return": 52127.991594508945,
-                "max_drawdown": 0.8721222014401758,
+                "sharpe": 1.019690914630503,
+                "total_return": 0.0,
+                "max_drawdown": 0.9100413772614556,
                 "n_trades": 505,
                 "win_rate": 0.4
             },
             "holdout_metrics": {
-                "sharpe": -1.0977038161304256,
-                "total_return": -0.15928258447473653,
-                "max_drawdown": 0.37211232013725287,
+                "sharpe": -0.4486000367516106,
+                "total_return": -0.14667165055301123,
+                "max_drawdown": 0.28693272081995114,
                 "n_trades": 18,
                 "win_rate": 0.2222222222222222
             }
@@ -144,18 +144,18 @@
             "author_name": "Lucien",
             "strategy_name": "SMA Crossover 1",
             "description": "Goes long when the 32-period SMA crosses above the 140-period SMA, and exits when it crosses below.",
-            "last_updated": "2025-05-17T09:58:22.770193Z",
+            "last_updated": "2025-05-18T01:29:28.580774Z",
             "development_metrics": {
-                "sharpe": 1.3255701716105417,
-                "total_return": 37176.1940346568,
-                "max_drawdown": 0.8976062164340162,
+                "sharpe": 1.0118606915477288,
+                "total_return": 0.0,
+                "max_drawdown": 0.9008756368721768,
                 "n_trades": 505,
                 "win_rate": 0.39603960396039606
             },
             "holdout_metrics": {
-                "sharpe": -0.692657754272795,
-                "total_return": -0.11414418233992363,
-                "max_drawdown": 0.2941198645359705,
+                "sharpe": -0.3455985281920747,
+                "total_return": -0.10357534709396965,
+                "max_drawdown": 0.20343506421228852,
                 "n_trades": 19,
                 "win_rate": 0.21052631578947367
             }
@@ -164,18 +164,18 @@
             "author_name": "Ben",
             "strategy_name": "SMA Crossover 1 - f30s120",
             "description": "Goes long when the 30-period SMA crosses above the 120-period SMA, and exits when it crosses below.",
-            "last_updated": "2025-05-17T09:58:25.545939Z",
+            "last_updated": "2025-05-18T01:28:17.382496Z",
             "development_metrics": {
-                "sharpe": 1.2890757652003817,
-                "total_return": 16908.019911407955,
-                "max_drawdown": 0.8924143378220439,
+                "sharpe": 0.9880303005215142,
+                "total_return": 0.0,
+                "max_drawdown": 0.8938590610489028,
                 "n_trades": 584,
                 "win_rate": 0.4126712328767123
             },
             "holdout_metrics": {
-                "sharpe": 0.1546100984967055,
-                "total_return": -0.005179828456650437,
-                "max_drawdown": 0.2720590455045794,
+                "sharpe": 0.36070758634040917,
+                "total_return": 0.02042796517270129,
+                "max_drawdown": 0.1500715880353096,
                 "n_trades": 20,
                 "win_rate": 0.25
             }
@@ -204,18 +204,18 @@
             "author_name": "Will",
             "strategy_name": "SMA Crossover 1",
             "description": "Goes long when the 18-period SMA crosses above the 80-period SMA, and exits when it crosses below.",
-            "last_updated": "2025-05-17T10:42:36.923447Z",
+            "last_updated": "2025-05-18T01:29:59.690158Z",
             "development_metrics": {
-                "sharpe": 1.269810403583702,
-                "total_return": 13939.800856186339,
-                "max_drawdown": 0.9369326634424754,
+                "sharpe": 0.9474753254858947,
+                "total_return": 0.0,
+                "max_drawdown": 0.8739019005929646,
                 "n_trades": 922,
                 "win_rate": 0.4490238611713666
             },
             "holdout_metrics": {
-                "sharpe": -0.010999558421471817,
-                "total_return": -0.027846486707612583,
-                "max_drawdown": 0.25898048706982313,
+                "sharpe": 0.11939246001567304,
+                "total_return": -0.01563791223631872,
+                "max_drawdown": 0.15329286158154742,
                 "n_trades": 27,
                 "win_rate": 0.2962962962962963
             }
@@ -224,18 +224,18 @@
             "author_name": "Lucien",
             "strategy_name": "EMA Crossover + Adaptive ATR Filter",
             "description": "Buy when fast EMA > slow EMA and ATR% > rolling quantile threshold; sell on reversal or low adaptive volatility.",
-            "last_updated": "2025-05-17T12:47:24.735129Z",
+            "last_updated": "2025-05-18T01:29:23.597247Z",
             "development_metrics": {
-                "sharpe": 1.217803722952385,
-                "total_return": 36432.64411560105,
-                "max_drawdown": 0.8861273181842388,
+                "sharpe": 0.7859666938562693,
+                "total_return": 0.0,
+                "max_drawdown": 0.8074225573260786,
                 "n_trades": 2787,
                 "win_rate": 0.5331898098313599
             },
             "holdout_metrics": {
-                "sharpe": 1.2721023608824928,
-                "total_return": 0.11707790357354719,
-                "max_drawdown": 0.16707933054084675,
+                "sharpe": 0.9189169934212579,
+                "total_return": 0.12113406807794047,
+                "max_drawdown": 0.1497632586697003,
                 "n_trades": 76,
                 "win_rate": 0.5263157894736842
             }
@@ -284,20 +284,40 @@
             "author_name": "Jim",
             "strategy_name": "Price Momentum",
             "description": "Buys when price increases from previous close, sells when it decreases, and holds otherwise.",
-            "last_updated": "2025-05-17T12:39:59.267829Z",
+            "last_updated": "2025-05-18T01:29:04.817783Z",
             "development_metrics": {
-                "sharpe": 0.276275037377082,
-                "total_return": 0.1333457776009599,
-                "max_drawdown": 1.0,
+                "sharpe": 0.5300341046820245,
+                "total_return": 15.680901289993098,
+                "max_drawdown": 0.676604772394234,
                 "n_trades": 31140,
                 "win_rate": 0.48477842003853566
             },
             "holdout_metrics": {
-                "sharpe": 0.20767671433807,
-                "total_return": 0.007159277061369984,
-                "max_drawdown": 0.1572180057756682,
+                "sharpe": 0.186547634249517,
+                "total_return": 0.0,
+                "max_drawdown": 0.08166008666493427,
                 "n_trades": 853,
                 "win_rate": 0.47596717467760846
+            }
+        },
+        {
+            "author_name": "YOUR_NAME",
+            "strategy_name": "YOUR_STRATEGY_NAME",
+            "description": "DESCRIBE YOUR STRATEGY HERE",
+            "last_updated": "2025-05-18T01:29:40.849205Z",
+            "development_metrics": {
+                "sharpe": 0.0,
+                "total_return": 0.0,
+                "max_drawdown": 0.0,
+                "n_trades": 0,
+                "win_rate": 0.0
+            },
+            "holdout_metrics": {
+                "sharpe": 0.0,
+                "total_return": 0.0,
+                "max_drawdown": 0.0,
+                "n_trades": 0,
+                "win_rate": 0.0
             }
         }
     ]
