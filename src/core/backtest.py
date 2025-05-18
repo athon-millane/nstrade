@@ -76,6 +76,7 @@ def run_backtest(strategy_class, df: pd.DataFrame, initial_capital: float = 1000
             coins.iloc[i:] = current_coins
         elif exits.iloc[i]:
             # Exit position
+            equity_curve.iloc[i] = current_coins * df['close'].iloc[i]
             current_position = 0
             current_coins = 0
             coins.iloc[i:] = 0
