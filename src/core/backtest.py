@@ -65,7 +65,6 @@ def run_backtest(strategy_class, df: pd.DataFrame, initial_capital: float = 1000
     # Track current position and coins
     current_position = 0
     current_coins = 0
-    equity_curve.iloc[0] = initial_capital
     
     # Process each bar
     for i in range(len(df)):
