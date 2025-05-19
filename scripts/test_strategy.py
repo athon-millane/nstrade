@@ -87,6 +87,7 @@ def test_strategy(strategy_path: str, return_results: bool = False):
         print(f"Max Drawdown: {dev_results['max_drawdown']*100:.2f}%")
         print(f"Number of Trades: {dev_results['n_trades']}")
         print(f"Win Rate: {dev_results['win_rate']*100:.2f}%")
+        print(f"R^2: {dev_results['r_squared']:.2f}")
     
     # Run backtest on holdout period
     if not return_results:
@@ -103,6 +104,7 @@ def test_strategy(strategy_path: str, return_results: bool = False):
         print(f"Max Drawdown: {holdout_results['max_drawdown']*100:.2f}%")
         print(f"Number of Trades: {holdout_results['n_trades']}")
         print(f"Win Rate: {holdout_results['win_rate']*100:.2f}%")
+        print(f"R^2: {holdout_results['r_squared']:.2f}")
         
     if return_results:
         return dev_results, holdout_results
